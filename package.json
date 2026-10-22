@@ -1,0 +1,41 @@
+{
+  "name": "atlas-plan-validator",
+  "version": "1.0.0",
+  "description": "Provider-independent plan graph and constraint validator for AI agent missions",
+  "keywords": [
+    "ai-agent",
+    "planner",
+    "dag",
+    "validation",
+    "safety",
+    "cycle-detection",
+    "budget-control"
+  ],
+  "author": "Atlas Project Contributors",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build",
+    "test": "tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeamArclight/atlas-plan-validator.git"
+  }
+}
